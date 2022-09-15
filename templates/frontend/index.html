@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='build/pages/index.css')}}"
+    />
+    <script
+      src="{{url_for('static', filename='build/pages/index.js')}}"
+      type="module"
+      defer
+    ></script>
+    <title>Сигналы</title>
+  </head>
+  <body class="page">
+    <div class="page__wrapper">
+      <div class="page__img-container">
+        <img
+          src="{{url_for('static', filename='images/musor.jpeg')}}"
+          alt="Картинка сигналов"
+          class="page__img"
+        />
+      </div>
+      <div class="page__content">
+        <form action="#" class="form" name="signalsForm">
+          <fieldset class="form__fieldset">
+            <label class="form__label">Список сиглалов:&ensp;</label>
+            <div class="form__col">
+              <div class="malfunctions">
+                <figure class="malfunctions__figure">
+                  <img class="malfunctions__img" />
+                  <figcaption class="malfunctions__description"></figcaption>
+                </figure>
+                <p class="malfunctions__responce">rge</p>
+                <ul class="malfunctions__list">
+                  <li class="malfunctions__item">
+                    Зеленые индикаторы
+                    <ul class="malfunctions__sublist"></ul>
+                  </li>
+                  <li class="malfunctions__item">
+                    Красные индикаторы
+                    <ul class="malfunctions__sublist"></ul>
+                  </li>
+                  <li class="malfunctions__item">
+                    Желтые индикаторы
+                    <ul class="malfunctions__sublist"></ul>
+                  </li>
+                </ul>
+              </div>
+              <button class="form__add-signal" type="button">Добавить</button>
+              <button class="form__submit" type="submit">Отправить</button>
+            </div>
+          </fieldset>
+        </form>
+        <div class="page__malfunctions">
+          <p class="page__description">Список неисправностей</p>
+          <ol class="page__list"></ol>
+        </div>
+      </div>
+    </div>
+    <div class="loader">
+      <div class="loader__dots">
+        <span class="loader__dot"></span>
+        <span class="loader__dot"></span>
+        <span class="loader__dot"></span>
+      </div>
+      <p class="loader__message">Отправка данных</p>
+    </div>
+    <template id="template">
+      <figure class="malfunction">
+        <img class="malfunction__img" />
+        <figcaption class="malfunction__description"></figcaption>
+      </figure>
+    </template>
+  </body>
+</html>

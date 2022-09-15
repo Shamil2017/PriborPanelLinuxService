@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <img src="{{url_for ('static', filename = './images/musor.jpeg')}}" alt="{{ user_image }}">
+    <form method = 'POST' action='/answer'>
+    <input name='phrase' type= 'TEXT' width ='60'>
+    <input value='Submit' type='SUBMIT'>
+    </form>
+</body>
+</html>
